@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚动菜单兼容PC 移动端</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="fonts/fontCss.css">
+	<link rel="stylesheet" href="css/scrollMenu.css">
+</head>
+<body style="margin: 0;width: 100%">
+	<div onclick="showList()" style="display: block;height: 50px;line-height: 50px;background: #aaa;text-align: center;cursor: pointer;">横向滚动菜单</div>
+
+	<div onclick="showList1()" style="display: block;height: 50px;line-height: 50px;background: #aaa;text-align: center;cursor: pointer;border-top: 1px solid #fff">点击打开选择滚动菜单</div>
+
+	<div onclick="showListbscroll()" style="display: block;height: 50px;line-height: 50px;background: #aaa;text-align: center;cursor: pointer;border-top: 1px solid #fff">bscroll的滚动效果</div>
+
+	<div onclick="showListnoborder()" style="display: block;height: 50px;line-height: 50px;background: #aaa;text-align: center;cursor: pointer;border-top: 1px solid #fff">没有分割线</div>
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/bscroll.js"></script>
+<script src="js/scrollMenu.js"></script>
+<script>
+	function showList(){
+		$dw.scrollMenu({
+			type:'cross',
+			// bscroll:true,
+			// animateIn:'bounceIn',
+			// animateOut:'bounceOut',
+			click:function(ret){
+				if(ret.hasHref){
+					return
+				}else{
+					// switch (ret.index){
+					// 	case 0:
+					// 	alert(0);
+					// 	break;
+					// }
+					alert(JSON.stringify(ret));
+				}
+			}
+		});
+	}
+
+	function showList1(){
+		$dw.scrollMenu({
+			type:'',
+			// bscroll:true,
+			// animateIn:'bounceIn',
+			// animateOut:'bounceOut',
+			click:function(ret){
+				if(ret.hasHref){
+					return
+				}else{
+					// switch (ret.index){
+					// 	case 0:
+					// 	alert(0);
+					// 	break;
+					// }
+					alert(JSON.stringify(ret));
+				}
+			}
+		});
+	}
+
+	function showListbscroll(){
+		$dw.scrollMenu({
+			// type:'',
+			bscroll:true,
+			// animateIn:'bounceIn',
+			// animateOut:'bounceOut',
+			click:function(ret){
+				if(ret.hasHref){
+					return
+				}else{
+					// switch (ret.index){
+					// 	case 0:
+					// 	alert(0);
+					// 	break;
+					// }
+					alert(JSON.stringify(ret));
+				}
+			}
+		});
+	}
+
+	function showListnoborder(){
+		$dw.scrollMenu({
+			type:'cross',
+			hasLineBorder:false,
+			// bscroll:true,
+			// animateIn:'bounceIn',
+			// animateOut:'bounceOut',
+			click:function(ret){
+				if(ret.hasHref){
+					return
+				}else{
+					// switch (ret.index){
+					// 	case 0:
+					// 	alert(0);
+					// 	break;
+					// }
+					alert(JSON.stringify(ret));
+				}
+			}
+		});
+	}
+</script>
+</html>
