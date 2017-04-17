@@ -172,7 +172,7 @@
     								rightFont_imgClass: 'dw-icon-right', 	//右侧的图标信息 
     							}
     							],
-    		click:function(ele,index){},
+    		click:function(ret){},
 
     	}
 
