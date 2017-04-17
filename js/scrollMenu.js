@@ -98,7 +98,7 @@
     		bscroll: 			false,				//是否使用bettersroll
     		showRightIcon: 		true, 				//横向列表下是否显示右侧图标
     		duration: 			300,				//300毫秒
-    		iconSIze: 			28,
+    		iconSize: 			28,
     		source: 			[
     							{
     								title:'音乐',
@@ -218,7 +218,7 @@
 				if(opt.source[i].hasHref){
 					_this.href = $('<a href="'+opt.source[i].href+'" target="'+opt.source[i].hrefType+'"></a>').appendTo(_this.cpt_li_menuList);
 					_this.icon = $('<i class="'+opt.source[i].font_imgClass+'"></i>').css({
-						'font-size':opt.iconSIze
+						'font-size':opt.iconSize
 					}).appendTo(_this.href);
 					_this.title = $('<p class="cpt-p-menuListTitle">'+opt.source[i].title+'</p>').appendTo(_this.href);
 					
@@ -233,7 +233,7 @@
 					}
 				}else{
 					_this.icon = $('<i class="'+opt.source[i].font_imgClass+'"></i>').css({
-						'font-size':opt.iconSIze
+						'font-size':opt.iconSize
 					}).appendTo(_this.cpt_li_menuList);
 					_this.title = $('<p class="cpt-p-menuListTitle">'+opt.source[i].title+'</p>').appendTo(_this.cpt_li_menuList);
 
