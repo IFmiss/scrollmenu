@@ -4,6 +4,7 @@ p{
 
 /* line 1, ../sass/component/_scrollMenu.scss */
 .cpt-selectScrollMenu {
+  -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
   -moz-user-select: -moz-none;
   -ms-user-select: none;
