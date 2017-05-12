@@ -90,6 +90,7 @@
     DW.scrollMenu = function(options) {
     	var defaultvalue = {
     		height: 			320,				//高度
+            zIndex:             10001,              //层级
     		background: 		'#fff',				//背景色	
     		type: 				'cross', 			//cross  or ''
     		animateIn: 			'fadeInUpBig',		//进入的动画方式   animate css
@@ -189,6 +190,7 @@
 			_this.cpt_selectScrollMenu = $('<div class="animated '+opt.animateIn+' cpt-selectScrollMenu" id="selectScrollMenu"></div>').css({
 				height:opt.height,
 				background:opt.background,
+                'z-index':opt.zIndex,
 				'webkit-transition':'all '+opt.duration/1000+'s',
 				'-moz-transition':'all '+opt.duration/1000+'s',
 				transition:'all '+opt.duration/1000+'s',
@@ -280,6 +282,7 @@
 
 		defaultvalue._clickMaskToClose = function(){
 			DW.showMask({
+                zIndex:opt.zIndex - 1, 
 	    		closeAnimate: function(){
 	    			_this.cpt_selectScrollMenu.addClass(opt.animateOut).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
 		    			_this.cpt_selectScrollMenu.remove();
