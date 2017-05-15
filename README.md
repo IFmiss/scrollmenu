@@ -23,4 +23,4 @@
 
 
 预览地址
-http://www.daiwei.org/works/UI/scrollMenu/
+http://www.daiwei.org/works/components/dialog/
