@@ -1,9 +1,10 @@
-# scrollMenu
+# scrollmenu
 这是关于弹出关闭可滚动的菜单效果   兼容pc、移动端
 
-* height: 			      //菜单栏的高度
+* height: 			  //菜单栏的高度
+* zIndex: 			  //层级
 * background:         //背景色	
-* type:  			        //cross  or ''   横向列表  和 正常显示的效果   具体见下方链接
+* type:  			  //cross  or ''   横向列表  和 正常显示的效果   具体见下方链接
 * animateIn:          //菜单进入的效果    可使用animate.css
 * animateOut:         //菜单关闭的效果
 * duration:           //动画执行时间
