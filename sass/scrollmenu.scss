@@ -1,0 +1,383 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@charset "utf-8";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/typography/text/ellipsis";
+@import "compass/typography/links/link-colors";
+@import "border-1px/_base.scss";				//一像素
+
+.cpt-dw-mask{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	@include translate3d(0,0,0);
+}
+
+.cpt-selectScrollMenu{
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: transparent;
+	@include user-select(none);
+	width: 100%;
+	background: #fff;
+	position: fixed;
+	z-index: 2000;
+	overflow:hidden;
+	height: 300px;
+	bottom: 0;
+	.menuContent{
+		padding: 20px;
+		@include display-flex;
+		@include justify-content(center);
+		@include flex-direction(column);
+
+		&.cross{
+			padding:0;
+
+			ul{
+				position: relative;
+			    width: 100%;
+			    display: table;
+			    padding: 0;
+			    margin: 0;
+
+			    li{
+			    	width: 100%;
+			    	@include flex-direction(row);
+			    	padding:10px 10px;
+			    	// border-bottom:1px solid red;
+
+			    	i{
+			    		margin-bottom: 0;
+			    		font-size: 24px;
+			    		margin: 0;
+			    		float: left;
+			    		&.cpt-rightIcon{
+							flex: 0 0 20px;
+							color: #ccc;
+							float: right;
+							margin-top: 5px;
+						}
+			    	}
+
+			    	p{
+		    		    width: 80%;
+		    		    text-indent: 20px;
+		    		    margin: 0;
+		    		    padding:2px 0;
+		    		    font-size: 16px;
+		    		    text-align: left;
+		    		    float: left;
+		    		    line-height: 1.5;
+		    		}
+
+			    	a{
+			    		@include flex-direction(row);
+			    		@include justify-content(flex-start);
+			    		background-color: transparent;
+			    		&:active{
+			    			background-color: transparent;
+			    		}
+
+			    		i{
+			    			margin-bottom: 0;
+			    			font-size: 24px;
+			    			margin: 0;
+			    			float: left;
+			    			&.cpt-rightIcon{
+								flex: 0 0 20px;
+								color: #ccc;
+								float: right;
+								margin-top: 5px;
+							}
+			    		}
+
+			    		p{
+			    		    width: 80%;
+			    		    text-indent: 20px;
+			    		    padding:2px 0;
+			    		    font-size: 16px;
+			    		    text-align: left;
+			    		    float: left;
+			    		    line-height: 1.5;
+			    		}
+			    	}
+
+			    	&.border-1px{
+			    		@include border-1px(rgba(17,27,37,0.1));
+			    	}
+			    }
+			}
+		}
+
+		ul{
+			position: relative;
+		    width: 100%;
+		    display: table;
+		    margin: 0;
+		    padding:0;
+
+		    li{
+				width: 25%;
+				float: left;
+				@include display-flex;
+				@include justify-content(flex-start);
+				@include flex-direction(column);
+				@include align-items(center);
+				position:relative;
+				padding:20px;
+				cursor: pointer;
+
+				&:active{
+					background:#eee;
+				}
+			
+				a{
+					width: 100%;
+					height:inherit;
+					@include display-flex;
+					@include justify-content(center);
+					@include flex-direction(column);
+					@include align-items(center);
+					text-decoration: none; 
+					background-color: transparent;
+					position:relative;
+					&:active{
+						background-color: transparent;
+					}
+
+					i{
+						display: block;
+						margin: 0 auto;
+						color: #878787;
+						margin-bottom: 10px;
+						font-size: 32px;
+						flex: 0 0 30px;
+					}
+
+					p{
+						white-space: nowrap;
+						overflow: hidden;
+						-ms-text-overflow: ellipsis;
+						-o-text-overflow: ellipsis;
+						text-overflow: ellipsis;
+						color: #999;
+						font-size: 14px;
+						flex: 1 1 auto;
+						text-align: center;
+						margin: 0;
+					}
+				}
+
+				i{
+					display: block;
+					margin: 0 auto;
+					font-size: 32px;
+					color: #878787;
+					margin-bottom: 10px;
+					flex: 0 0 30px;
+				}
+
+				p{
+					white-space: nowrap;
+					overflow: hidden;
+					-ms-text-overflow: ellipsis;
+					-o-text-overflow: ellipsis;
+					text-overflow: ellipsis;
+					color: #999;
+					font-size: 14px;
+					flex: 1 1 auto;
+					text-align: center;
+				}
+		    }
+		}
+	}
+}
+
+
+//通用样式
+// 这里将是所有的颜色列表信息
+$dw-color-default:#ffffff;
+$dw-color-default-hover:#e6e6e6;
+
+$dw-color-success:#21B384;
+$dw-color-success-hover:#28A47C;
+
+$dw-color-primary:#4D96DF;
+$dw-color-primary-hover:#4684C3;
+
+$dw-color-warning:#FFBD7A;
+$dw-color-warning-hover:#F0AF6D;
+
+$dw-color-danger:#D9534F;
+$dw-color-danger-hover:#C74743;
+
+$dw-color-skyblue:#99CCFF;
+$dw-color-skyblue-hover:#8EB5DB;
+
+$dw-color-powderblue:#99CCCC;
+$dw-color-powderblue-hover:#85BDBD;
+
+$dw-color-springgreen:#66CC99;
+$dw-color-springgreen-hover:#5AB588;
+
+$dw-color-lightpurple:#CCCCFF;
+$dw-color-lightpurple-hover:#B8B8E9;
+
+$dw-color-lightgrey:#CCCCCC;
+$dw-color-lightgrey-hover:#C5C5C5;
+
+$dw-color-deepred:#AA314D;
+$dw-color-deepred-hover:#923248;
+
+body,html{
+	margin:0;
+	padding:0;
+	@include box-sizing(border-box);
+}
+
+*{
+	@include box-sizing(border-box);
+}
+
+//***************************************fadeInNoTransform
+@-webkit-keyframes fadeInNoTransform{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+@keyframes fadeInNoTransform{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+.fadeInNoTransform{-webkit-animation-name:fadeInNoTransform;animation-name:fadeInNoTransform}
+
+//***************************************fadeOutNoTransform
+@-webkit-keyframes fadeOutNoTransform{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+
+@keyframes fadeOutNoTransform{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+
+.fadeOutNoTransform{-webkit-animation-name:fadeOutNoTransform;animation-name:fadeOutNoTransform}
+
+
+//***************************************fadeIn
+@-webkit-keyframes fadeIn{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+@keyframes fadeIn{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+.fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn}
+
+//***************************************fadeOut
+@-webkit-keyframes fadeOut{
+	0%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	100%{opacity:0;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+@keyframes fadeOut{
+	0%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	100%{opacity:0;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+.fadeOut{-webkit-animation-name:fadeOut;animation-name:fadeOut}
+
+
+//***************************************fadeInUp
+
+@-webkit-keyframes fadeInUp{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,20px,0);transform:translate3d(-50%,20px,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+@keyframes fadeInUp{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,20px,0);-ms-transform:translate3d(-50%,20px,0);transform:translate3d(-50%,20px,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}
+
+//***************************************fadeOutDown
+
+@-webkit-keyframes fadeOutDown{
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	0%{opacity:0;-webkit-transform:translate3d(-50%,20px,0);transform:translate3d(-50%,20px,0)}
+}
+
+@keyframes fadeOutDown{
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+	0%{opacity:0;-webkit-transform:translate3d(-50%,20px,0);-ms-transform:translate3d(-50%,20px,0);transform:translate3d(-50%,20px,0)}
+}
+
+.fadeOutDown{-webkit-animation-name:fadeOutDown;animation-name:fadeOutDown}
+
+
+
+//***************************************fadeInDown
+@-webkit-keyframes fadeInDown{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,-40px,0);transform:translate3d(-50%,-40px,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+@keyframes fadeInDown{
+	0%{opacity:0;-webkit-transform:translate3d(-50%,-40px,0);-ms-transform:translate3d(-50%,-40px,0);transform:translate3d(-50%,-40px,0)}
+	100%{opacity:1;-webkit-transform:translate3d(-50%,-50%,0);-ms-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}
+}
+
+.fadeInDown{-webkit-animation-name:fadeInDown;animation-name:fadeInDown}
+
+
+//关闭谷歌浏览器输入框黑色
+input:-webkit-autofill, 
+	textarea:-webkit-autofill, 
+	select:-webkit-autofill { 
+	       -webkit-box-shadow: 0 0 0 1000px white inset!important; 
+}
+
+// input:-webkit-autofill {  
+// 	-webkit-box-shadow: 0 0 0px 1000px white inset !important;  
+// }  
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+	      -webkit-box-shadow: 0 0 0 1000px white inset; 
+}
+
+
+.txt-color-666{
+	color:#666 !important;
+}
+
+.txt-textOneRow{
+	text-overflow: ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+.txt-textTwoRow{
+	// height: 40 
+	// line-height:  20     几行就是几的倍数 
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}

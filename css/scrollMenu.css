@@ -1,8 +1,123 @@
-p{
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-/* line 1, ../sass/component/_scrollMenu.scss */
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  /* line 3, ../sass/border-1px/_media.scss */
+  .border-1px::after {
+    -moz-transform: scaleY(0.65);
+    -ms-transform: scaleY(0.65);
+    -webkit-transform: scaleY(0.65);
+    transform: scaleY(0.65);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  /* line 11, ../sass/border-1px/_media.scss */
+  .border-1px::after {
+    -moz-transform: scaleY(0.5);
+    -ms-transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5) {
+  /* line 19, ../sass/border-1px/_media.scss */
+  .border-1px::after {
+    -moz-transform: scaleY(0.4);
+    -ms-transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  /* line 27, ../sass/border-1px/_media.scss */
+  .border-1px::after {
+    -moz-transform: scaleY(0.33);
+    -ms-transform: scaleY(0.33);
+    -webkit-transform: scaleY(0.33);
+    transform: scaleY(0.33);
+  }
+}
+/* line 14, ../sass/scrollmenu.scss */
+.cpt-dw-mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 25, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu {
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
@@ -18,7 +133,7 @@ p{
   height: 300px;
   bottom: 0;
 }
-/* line 11, ../sass/component/_scrollMenu.scss */
+/* line 36, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent {
   padding: 20px;
   display: -webkit-flex;
@@ -28,11 +143,11 @@ p{
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-/* line 17, ../sass/component/_scrollMenu.scss */
+/* line 42, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent.cross {
   padding: 0;
 }
-/* line 20, ../sass/component/_scrollMenu.scss */
+/* line 45, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent.cross ul {
   position: relative;
   width: 100%;
@@ -40,27 +155,39 @@ p{
   padding: 0;
   margin: 0;
 }
-/* line 27, ../sass/component/_scrollMenu.scss */
+/* line 52, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent.cross ul li {
   width: 100%;
   -webkit-flex-direction: row;
   flex-direction: row;
   padding: 10px 10px;
 }
-/* line 33, ../sass/component/_scrollMenu.scss */
+/* line 58, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent.cross ul li i {
   margin-bottom: 0;
   font-size: 24px;
+  margin: 0;
+  float: left;
 }
-/* line 38, ../sass/component/_scrollMenu.scss */
+/* line 63, ../sass/scrollmenu.scss */
+.cpt-selectScrollMenu .menuContent.cross ul li i.cpt-rightIcon {
+  flex: 0 0 20px;
+  color: #ccc;
+  float: right;
+  margin-top: 5px;
+}
+/* line 71, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent.cross ul li p {
   width: 80%;
   text-indent: 20px;
   margin: 0;
   padding: 2px 0;
   font-size: 16px;
+  text-align: left;
+  float: left;
+  line-height: 1.5;
 }
-/* line 46, ../sass/component/_scrollMenu.scss */
+/* line 82, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent.cross ul li a {
   -webkit-flex-direction: row;
   flex-direction: row;
@@ -68,27 +195,39 @@ p{
   justify-content: flex-start;
   background-color: transparent;
 }
-/* line 50, ../sass/component/_scrollMenu.scss */
+/* line 86, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent.cross ul li a:active {
   background-color: transparent;
 }
-/* line 54, ../sass/component/_scrollMenu.scss */
+/* line 90, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent.cross ul li a i {
   margin-bottom: 0;
   font-size: 24px;
+  margin: 0;
+  float: left;
 }
-/* line 59, ../sass/component/_scrollMenu.scss */
+/* line 95, ../sass/scrollmenu.scss */
+.cpt-selectScrollMenu .menuContent.cross ul li a i.cpt-rightIcon {
+  flex: 0 0 20px;
+  color: #ccc;
+  float: right;
+  margin-top: 5px;
+}
+/* line 103, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent.cross ul li a p {
   width: 80%;
   text-indent: 20px;
   padding: 2px 0;
   font-size: 16px;
+  text-align: left;
+  float: left;
+  line-height: 1.5;
 }
-/* line 67, ../sass/component/_scrollMenu.scss */
+/* line 114, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent.cross ul li.border-1px {
   position: relative;
 }
-/* line 3, ../sass/component/border-1px/_mixin.scss */
+/* line 3, ../sass/border-1px/_mixin.scss */
 .cpt-selectScrollMenu .menuContent.cross ul li.border-1px:after {
   display: block;
   width: 100%;
@@ -99,7 +238,7 @@ p{
   border-top: 1px solid rgba(17, 27, 37, 0.1) !important;
   content: '';
 }
-/* line 74, ../sass/component/_scrollMenu.scss */
+/* line 121, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent ul {
   position: relative;
   width: 100%;
@@ -107,7 +246,7 @@ p{
   margin: 0;
   padding: 0;
 }
-/* line 81, ../sass/component/_scrollMenu.scss */
+/* line 128, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent ul li {
   width: 25%;
   float: left;
@@ -123,11 +262,11 @@ p{
   padding: 20px;
   cursor: pointer;
 }
-/* line 92, ../sass/component/_scrollMenu.scss */
+/* line 139, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent ul li:active {
   background: #eee;
 }
-/* line 96, ../sass/component/_scrollMenu.scss */
+/* line 143, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent ul li a {
   width: 100%;
   height: inherit;
@@ -143,23 +282,20 @@ p{
   background-color: transparent;
   position: relative;
 }
-/* line 106, ../sass/component/_scrollMenu.scss */
+/* line 153, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent ul li a:active {
   background-color: transparent;
 }
-/* line 110, ../sass/component/_scrollMenu.scss */
+/* line 157, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent ul li a i {
+  display: block;
+  margin: 0 auto;
   color: #878787;
   margin-bottom: 10px;
   font-size: 32px;
   flex: 0 0 30px;
 }
-/* line 115, ../sass/component/_scrollMenu.scss */
-.cpt-selectScrollMenu .menuContent ul li a i.cpt-rightIcon {
-  flex: 0 0 20px;
-  color: #ccc;
-}
-/* line 121, ../sass/component/_scrollMenu.scss */
+/* line 166, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent ul li a p {
   white-space: nowrap;
   overflow: hidden;
@@ -169,21 +305,19 @@ p{
   color: #999;
   font-size: 14px;
   flex: 1 1 auto;
+  text-align: center;
   margin: 0;
 }
-/* line 134, ../sass/component/_scrollMenu.scss */
+/* line 180, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent ul li i {
+  display: block;
+  margin: 0 auto;
   font-size: 32px;
   color: #878787;
   margin-bottom: 10px;
   flex: 0 0 30px;
 }
-/* line 139, ../sass/component/_scrollMenu.scss */
-.cpt-selectScrollMenu .menuContent ul li i.cpt-rightIcon {
-  flex: 0 0 20px;
-  color: #ccc;
-}
-/* line 145, ../sass/component/_scrollMenu.scss */
+/* line 189, ../sass/scrollmenu.scss */
 .cpt-selectScrollMenu .menuContent ul li p {
   white-space: nowrap;
   overflow: hidden;
@@ -193,41 +327,25 @@ p{
   color: #999;
   font-size: 14px;
   flex: 1 1 auto;
+  text-align: center;
 }
 
-/* line 1, ../sass/component/_mask.scss */
-.cpt-dw-mask {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+/* line 241, ../sass/scrollmenu.scss */
+body, html {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* line 247, ../sass/scrollmenu.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
-  /* line 3, ../sass/component/border-1px/_media.scss */
-  .border-1px::after {
-    -moz-transform: scaleY(0.7);
-    -ms-transform: scaleY(0.7);
-    -webkit-transform: scaleY(0.7);
-    transform: scaleY(0.7);
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-  /* line 11, ../sass/component/border-1px/_media.scss */
-  .border-1px::after {
-    -moz-transform: scaleY(0.5);
-    -ms-transform: scaleY(0.5);
-    -webkit-transform: scaleY(0.5);
-    transform: scaleY(0.5);
-  }
-}
 @-webkit-keyframes fadeInNoTransform {
   0% {
     opacity: 0;
@@ -244,7 +362,7 @@ p{
     opacity: 1;
   }
 }
-/* line 47, ../sass/component/_global.scss */
+/* line 262, ../sass/scrollmenu.scss */
 .fadeInNoTransform {
   -webkit-animation-name: fadeInNoTransform;
   animation-name: fadeInNoTransform;
@@ -266,7 +384,7 @@ p{
     opacity: 0;
   }
 }
-/* line 60, ../sass/component/_global.scss */
+/* line 275, ../sass/scrollmenu.scss */
 .fadeOutNoTransform {
   -webkit-animation-name: fadeOutNoTransform;
   animation-name: fadeOutNoTransform;
@@ -298,7 +416,7 @@ p{
     transform: translate3d(-50%, -50%, 0);
   }
 }
-/* line 74, ../sass/component/_global.scss */
+/* line 289, ../sass/scrollmenu.scss */
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
@@ -330,7 +448,7 @@ p{
     transform: translate3d(-50%, -50%, 0);
   }
 }
-/* line 87, ../sass/component/_global.scss */
+/* line 302, ../sass/scrollmenu.scss */
 .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
@@ -362,7 +480,7 @@ p{
     transform: translate3d(-50%, -50%, 0);
   }
 }
-/* line 102, ../sass/component/_global.scss */
+/* line 317, ../sass/scrollmenu.scss */
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
@@ -394,7 +512,7 @@ p{
     transform: translate3d(-50%, 20px, 0);
   }
 }
-/* line 116, ../sass/component/_global.scss */
+/* line 331, ../sass/scrollmenu.scss */
 .fadeOutDown {
   -webkit-animation-name: fadeOutDown;
   animation-name: fadeOutDown;
@@ -426,47 +544,41 @@ p{
     transform: translate3d(-50%, -50%, 0);
   }
 }
-/* line 131, ../sass/component/_global.scss */
+/* line 346, ../sass/scrollmenu.scss */
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
 
-/* line 135, ../sass/component/_global.scss */
+/* line 350, ../sass/scrollmenu.scss */
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
 
-/* line 145, ../sass/component/_global.scss */
+/* line 360, ../sass/scrollmenu.scss */
 input[type=text]:focus, input[type=password]:focus, textarea:focus {
   -webkit-box-shadow: 0 0 0 1000px white inset;
 }
 
-/* line 150, ../sass/component/_global.scss */
+/* line 365, ../sass/scrollmenu.scss */
 .txt-color-666 {
   color: #666 !important;
 }
 
-/* line 154, ../sass/component/_global.scss */
+/* line 369, ../sass/scrollmenu.scss */
 .txt-textOneRow {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-/* line 160, ../sass/component/_global.scss */
+/* line 375, ../sass/scrollmenu.scss */
 .txt-textTwoRow {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-}
-
-*{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
