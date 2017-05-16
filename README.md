@@ -23,4 +23,4 @@
 
 
 预览地址
-http://www.daiwei.org/works/components/scrollmenu/
+http://daiwei.org/components/scrollmenu/
