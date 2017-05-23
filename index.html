@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>滚动菜单兼容PC 移动端</title>
+	<link rel="shortcut icon" href="http://www.daiwei.org/index/images/logo/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
 	<link rel="stylesheet" href="http://www.daiwei.org/global/css/global.css">
 	<link rel="stylesheet" href="css/animate.css">
@@ -18,6 +19,8 @@
 		<div class="dw-btn btn-danger" style="width:300px;text-align:center;display: block;margin: 20px 0; " onclick="showListbscroll()">bscroll的滚动效果</div>
 
 		<div class="dw-btn btn-deepred" style="width:300px;text-align:center;display: block;margin: 20px 0; " onclick="showListnoborder()">没有分割线</div>
+
+		<div class="dw-btn btn-success" style="width:300px;text-align:center;display: block;margin: 20px 0; " onclick="showListbounce()">其他进入效果</div>
 	</div>
 </body>
 
@@ -95,6 +98,28 @@
 			// bscroll:true,
 			// animateIn:'bounceIn',
 			// animateOut:'bounceOut',
+			click:function(ret){
+				if(ret.hasHref){
+					return
+				}else{
+					// switch (ret.index){
+					// 	case 0:
+					// 	alert(0);
+					// 	break;
+					// }
+					alert(JSON.stringify(ret));
+				}
+			}
+		});
+	}
+
+	function showListbounce(){
+		$("body").scrollmenu({
+			type:'cross',
+			hasLineBorder:false,
+			// bscroll:true,
+			animateIn:'bounceIn',
+			animateOut:'bounceOut',
 			click:function(ret){
 				if(ret.hasHref){
 					return

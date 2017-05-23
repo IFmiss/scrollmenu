@@ -4,7 +4,27 @@
 
 (function($,window){
 'use strict';
-	var DW = {};
+    //动态加载animate
+    var loadStyles = function(url) {
+        var hasSameStyle = false;
+        var links = $('link');
+        for(var i = 0;i<links.length;i++){
+            if(links.eq(i).attr('href') == url){
+                hasSameStyle = true;
+                return
+            }
+        }
+
+        if(!hasSameStyle){
+            var link = document.createElement("link");
+            link.type = "text/css";
+            link.rel = "stylesheet";
+            link.href = url;
+            document.getElementsByTagName("head")[0].appendChild(link);
+        }
+    }
+
+    loadStyles('http://www.daiwei.org/global/css/animate.css');
 
 	//显示浮层
     var showMask = function(options) {
@@ -12,7 +32,7 @@
     	var defaultvalue = {
     		background: 			'rgba(0,0,0,0.6)',			//背景色
     		zIndex: 				'1000',						//层级
-    		animateStyle: 			'fadeInNoTransform',		//进入动画
+    		animateStyle: 			'fadeIn',		//进入动画
     		clickClose: 			true, 						//是否可以点击关闭
     		duration: 				500, 						//动画的过渡时间
     		closeAnimate:function(){}, 							//关闭浮层 的回调   也可以写其他元素的关闭动画 
@@ -70,7 +90,7 @@
 
     	defaultvalue._removeMask = function(){
             if(!isLowerIe9()){
-                showMaskEle.addClass("fadeOutNoTransform").on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+                showMaskEle.addClass("fadeOut").on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
         			showMaskEle.remove();
         		});
             }else{
@@ -299,7 +319,7 @@
                             _this.cpt_selectScrollMenu.remove();
                         });
 
-                        $('.cpt-dw-mask').addClass("fadeOutNoTransform").on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+                        $('.cpt-dw-mask').addClass("fadeOut").on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
                             $('.cpt-dw-mask').remove();
 
                             //可滚动
@@ -315,7 +335,7 @@
                         $('body,html').css({height:'auto',overflow:'auto'});
                         $(document.body).css({
                             'border-right':'none',
-                        });
+                        });isLowerIe9 
                     }
 				});
 			}
@@ -366,7 +386,5 @@
     	defaultvalue._init();
     	return this;	
     };
-
-  	window.$dw = DW;
 
 })(jQuery,window); 
