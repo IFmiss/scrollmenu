@@ -346,235 +346,31 @@ body, html {
   box-sizing: border-box;
 }
 
-@-webkit-keyframes fadeInNoTransform {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeInNoTransform {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* line 262, ../sass/scrollmenu.scss */
-.fadeInNoTransform {
-  -webkit-animation-name: fadeInNoTransform;
-  animation-name: fadeInNoTransform;
-}
-
-@-webkit-keyframes fadeOutNoTransform {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fadeOutNoTransform {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-/* line 275, ../sass/scrollmenu.scss */
-.fadeOutNoTransform {
-  -webkit-animation-name: fadeOutNoTransform;
-  animation-name: fadeOutNoTransform;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-/* line 289, ../sass/scrollmenu.scss */
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-/* line 302, ../sass/scrollmenu.scss */
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, 20px, 0);
-    transform: translate3d(-50%, 20px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, 20px, 0);
-    -ms-transform: translate3d(-50%, 20px, 0);
-    transform: translate3d(-50%, 20px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-/* line 317, ../sass/scrollmenu.scss */
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-@-webkit-keyframes fadeOutDown {
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, 20px, 0);
-    transform: translate3d(-50%, 20px, 0);
-  }
-}
-@keyframes fadeOutDown {
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, 20px, 0);
-    -ms-transform: translate3d(-50%, 20px, 0);
-    transform: translate3d(-50%, 20px, 0);
-  }
-}
-/* line 331, ../sass/scrollmenu.scss */
-.fadeOutDown {
-  -webkit-animation-name: fadeOutDown;
-  animation-name: fadeOutDown;
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -40px, 0);
-    transform: translate3d(-50%, -40px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-50%, -40px, 0);
-    -ms-transform: translate3d(-50%, -40px, 0);
-    transform: translate3d(-50%, -40px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-/* line 346, ../sass/scrollmenu.scss */
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
-
-/* line 350, ../sass/scrollmenu.scss */
+/* line 252, ../sass/scrollmenu.scss */
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
 
-/* line 360, ../sass/scrollmenu.scss */
+/* line 262, ../sass/scrollmenu.scss */
 input[type=text]:focus, input[type=password]:focus, textarea:focus {
   -webkit-box-shadow: 0 0 0 1000px white inset;
 }
 
-/* line 365, ../sass/scrollmenu.scss */
+/* line 267, ../sass/scrollmenu.scss */
 .txt-color-666 {
   color: #666 !important;
 }
 
-/* line 369, ../sass/scrollmenu.scss */
+/* line 271, ../sass/scrollmenu.scss */
 .txt-textOneRow {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-/* line 375, ../sass/scrollmenu.scss */
+/* line 277, ../sass/scrollmenu.scss */
 .txt-textTwoRow {
   overflow: hidden;
   text-overflow: ellipsis;
