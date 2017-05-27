@@ -21,6 +21,8 @@
 		<div class="dw-btn btn-deepred" style="width:300px;text-align:center;display: block;margin: 20px 0; " onclick="showListnoborder()">没有分割线</div>
 
 		<div class="dw-btn btn-success" style="width:300px;text-align:center;display: block;margin: 20px 0; " onclick="showListbounce()">其他进入效果</div>
+
+		<div class="dw-btn btn-primary" style="width:300px;text-align:center;display: block;margin: 20px 0; " onclick="showListNo()">无动画效果</div>
 	</div>
 </body>
 
@@ -120,6 +122,29 @@
 			// bscroll:true,
 			animateIn:'bounceIn',
 			animateOut:'bounceOut',
+			click:function(ret){
+				if(ret.hasHref){
+					return
+				}else{
+					// switch (ret.index){
+					// 	case 0:
+					// 	alert(0);
+					// 	break;
+					// }
+					alert(JSON.stringify(ret));
+				}
+			}
+		});
+	}
+
+	function showListNo(){
+		$("body").scrollmenu({
+			type:'cross',
+			hasLineBorder:false,
+			// bscroll:true,
+			animateIn:'bounceIn',
+			animateOut:'bounceOut',
+			duration:0,
 			click:function(ret){
 				if(ret.hasHref){
 					return

@@ -347,6 +347,7 @@
 
 		defaultvalue._clickMaskToClose = function(){
 			showMask({
+                duration:opt.duration,
                 zIndex:opt.zIndex - 1, 
 	    		closeAnimate: function(){
                     if(!isLowerIe9()){
