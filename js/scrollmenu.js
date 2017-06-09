@@ -157,7 +157,7 @@
     							},{
     								title:'搜索',
     								hasHref:false,
-    								href:'www.daiwei.org',
+    								href:'https://github.com/IFmiss/centermenu',
     								font_imgClass:'dw-icon-search',
     								hrefType:'_self',   
     								rightFont_imgClass: 'dw-icon-right', 	//右侧的图标信息 
@@ -185,35 +185,35 @@
     							},{
     								title:'喜欢',
     								hasHref:true,
-    								href:'#',
+    								href:'https://github.com/IFmiss/centermenu',
     								font_imgClass:'dw-icon-like',
     								hrefType:'_self',   
     								rightFont_imgClass: 'dw-icon-right', 	//右侧的图标信息 
     							},{
     								title:'提现',
     								hasHref:true,
-    								href:'#',
+    								href:'https://github.com/IFmiss/centermenu',
     								font_imgClass:'dw-icon-money',
     								hrefType:'_self',   
     								rightFont_imgClass: 'dw-icon-right', 	//右侧的图标信息 
     							},{
     								title:'微博',
     								hasHref:true,
-    								href:'#',
+    								href:'https://github.com/IFmiss/centermenu',
     								font_imgClass:'dw-icon-weibo',
     								hrefType:'_self',   
     								rightFont_imgClass: 'dw-icon-right', 	//右侧的图标信息 
     							},{
     								title:'密码',
     								hasHref:true,
-    								href:'#',
+    								href:'https://github.com/IFmiss/centermenu',
     								font_imgClass:'dw-icon-password',
     								hrefType:'_self',    
     								rightFont_imgClass: 'dw-icon-right', 	//右侧的图标信息
     							},{
     								title:'分享',
     								hasHref:true,
-    								href:'#',
+    								href:'https://github.com/IFmiss/centermenu',
     								font_imgClass:'dw-icon-share',
     								hrefType:'_self',   
     								rightFont_imgClass: 'dw-icon-right', 	//右侧的图标信息 
