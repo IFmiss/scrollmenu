@@ -1,3 +1,6 @@
+预览地址
+http://daiwei.org/components/scrollmenu/
+
 # scrollmenu
 这是关于弹出关闭可滚动的菜单效果   兼容pc、移动端
 
@@ -23,5 +26,3 @@
 
 * ### 注意：'-hastrans'是我在animate.css的基础上加的,目的是当元素为绝对定位又想用translate居中时候,修改translate的值无效,故做了一些修改,之前的class也可以正常使用
 
-预览地址
-http://daiwei.org/components/scrollmenu/
